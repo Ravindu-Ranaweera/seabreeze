@@ -14,26 +14,27 @@
         <div class="footer-container">
             <div class="footer-left">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15872.630594741284!2d80.4331891!3d5.9730164!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc30788ae9b82a0c7!2sBayfront!5e0!3m2!1sen!2slk!4v1594919424506!5m2!1sen!2slk"
-                    width="80%" height="250px" frameborder="0" style="border: 0; margin-bottom: 30px" allowfullscreen=""
-                    aria-hidden="false" tabindex="0"></iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.249625901446!2d80.056372!3d6.222474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8554f816b5a0332e!2sSea%20Breeze%20Hotel!5e0!3m2!1sen!2slk!4v1609299031568!5m2!1sen!2slk"
+                    width="80%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0">
+                </iframe>
             </div>
 
             <div class="footer-center">
 
                 <div>
                     <i class="fa fa-map-marker"></i>
-                    <p><span>502, Bypass road</span> Weligama, Sri Lanka</p>
+                    <p><span>155, Galle Road,</span> Urawaththa, Ambalangoda</p>
                 </div>
 
                 <div>
                     <i class="fa fa-phone"></i>
-                    <p>+94 76 729 3945</p>
+                    <p>+94 91 22 55161</p>
                 </div>
 
                 <div>
                     <i class="fa fa-envelope"></i>
-                    <p><a href="bayfrontweli45@gmail.com">bayfrontweli45@gmail.com</a></p>
+                    <p><a href="bayfrontweli45@gmail.com">seabreezesrilanka@gmail.com</a></p>
                 </div>
 
 

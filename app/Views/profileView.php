@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="<?php echo BURL.'assets/img/basic/favicon.png'; ?>" />
-    <title>BAYFRONT SURF</title>
+    <title>SEABREEZE HOTEL</title>
 
 </head>
 <style>
@@ -333,7 +333,7 @@ dl.bookings dt {
     <div class="profileCover">
         <img class="imageProf" src="<?php echo BURL.'assets/img/home/prof.svg' ?>">
         <div class="top-right">
-            <h1> Welcome to the Hotel BayFront</h1>
+            <h1> Welcome to the Hotel Seabreeze</h1>
         </div>
     </div>
 

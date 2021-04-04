@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="zoomImgage/png" href="<?php echo BURL.'assets/img/basic/favicon.png'; ?>" />
     <script type="text/javascript" src="<?php echo BURL.'assets/js/alert.js'; ?>"></script>
-    <title>BAYFRONT SURF</title>
+    <title>SEABREEZE HOTEL</title>
 
 </head>
 

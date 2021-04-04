@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="<?php echo BURL.'assets/img/basic/favicon.png'; ?>" />
     <script type="text/javascript" src="<?php echo BURL.'assets/js/alert.js'; ?>"></script>
-    <title>Document</title>
+    <title>SEABREEZE HOTEL</title>
 </head>
 <style>
 
@@ -14,30 +14,26 @@
 </style>
 
 <body>
-     
 
-<?php if(isset($check_availability['avilability']) && $check_availability['avilability'] == 1) { ?>
+
+    <?php if(isset($check_availability['avilability']) && $check_availability['avilability'] == 1) { ?>
     <!-- //   echo '<script>alert("Check Room Availability")</script>'; -->
-    <button style="display:none;" id="error-state"
-            onclick="customAlert.alert('Check Room Availability')">
-      </button>
-    
-<?php    } if(isset($errors)) { ?>
-      <!-- echo '<script>alert("Invalid Data")</script>'; -->
-      <button style="display:none;" id="error-state"
-            onclick="customAlert.alert('Invalid Data')">
-      </button>
-<?php     }if(isset($roomAvailable['availability']) && $roomAvailable['availability'] == 0 ) { ?>
-      <!-- echo '<script>alert("Room isn\'t Available")</script>'; -->
-      <button style="display:none;" id="error-state"
-            onclick="customAlert.alert('Room is not Avalialble')">
-      </button>
-<?php }if(isset($roomAvailable['availability']) && $roomAvailable['availability'] == 1 ) { ?>
-      <!-- echo '<script>alert("Room is Available")</script>'; -->
-      <button style="display:none;" id="error-state"
-            onclick="customAlert.alert('Room is Available')">
-      </button>
-<?php } ?>
+    <button style="display:none;" id="error-state" onclick="customAlert.alert('Check Room Availability')">
+    </button>
+
+    <?php    } if(isset($errors)) { ?>
+    <!-- echo '<script>alert("Invalid Data")</script>'; -->
+    <button style="display:none;" id="error-state" onclick="customAlert.alert('Invalid Data')">
+    </button>
+    <?php     }if(isset($roomAvailable['availability']) && $roomAvailable['availability'] == 0 ) { ?>
+    <!-- echo '<script>alert("Room isn\'t Available")</script>'; -->
+    <button style="display:none;" id="error-state" onclick="customAlert.alert('Room is not Avalialble')">
+    </button>
+    <?php }if(isset($roomAvailable['availability']) && $roomAvailable['availability'] == 1 ) { ?>
+    <!-- echo '<script>alert("Room is Available")</script>'; -->
+    <button style="display:none;" id="error-state" onclick="customAlert.alert('Room is Available')">
+    </button>
+    <?php } ?>
 
     <?php include(VIEWS.'inc/header_navbar.php'); ?>
 

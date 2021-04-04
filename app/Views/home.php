@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="<?php echo BURL.'assets/img/basic/favicon.png'; ?>" />
-    <title>BAYFRONT HOTEL</title>
+    <title>SEABREEZE HOTEL</title>
 
 </head>
 
@@ -102,18 +102,14 @@
 
             <div class="activityRow activityThree">
                 <dev class="activity2-text">
-                    <h1>EXPERIENCE <br />BAYFRONT WELIGAMA</h1>
+                    <h1>EXPERIENCE <br />HOTEL SEABREEZE</h1>
                     <hr class="line-style" />
                     <br />
                     <p>
                         Overlooking Mirissa Beach in Sri Lanka, our 3-star beach resort captivates
                         beauty of Sri Lanka and the hospitality of her people. With stylish hotel rooms
                         and suites, our hotel has breathtaking water views, excellent service, and a
-                        prime location. Take advantage of surfing lessons by professionals. Indulge
-                        yourself at our Spa and entrance your taste buds with superlative offerings
-                        from our restaurant and bar. During your stay, explore Galle Dutch Fort, Mirissa
-                        Beach, Jungle Beach, and finally the famous Instagram tourist attraction, the
-                        Mirissa Coconut Hill. A stay at our hotel is simply heavenly.
+                        prime location. Take advantage of surfing lessons by professionals.
                     </p>
                     <a class="btn" href="<?php url('Activity/index'); ?>  ">FIND OUT MORE
                         <i class="fa fa-chevron-right" aria-hidden="true"></i></a>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="zoomImgage/png" href="<?php echo BURL.'assets/img/basic/favicon.png'; ?>" />
-    <title>BAYFRONT ACTIVITY </title>
+    <title>SEABREEZE HOTEL</title>
 
 </head>
 <style>

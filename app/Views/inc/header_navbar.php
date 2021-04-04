@@ -22,7 +22,6 @@
 
             <div class="logo-container">
                 <img src="<?php echo BURL.'assets/img/basic/logo.png'; ?>" alt="">
-                <h3 class="logo">BAY FRONT</h3>
             </div>
 
             <div class="nav-btn">
@@ -76,7 +75,6 @@
 
             <div class="logo-container">
                 <img src="<?php echo BURL.'assets/img/basic/logo.png'; ?>" alt="">
-                <h3 class="logo">BAY FRONT</h3>
             </div>
 
             <div class="nav-btn">
@@ -129,7 +127,6 @@
 
             <div class="logo-container">
                 <img src="<?php echo BURL.'assets/img/basic/logo.png'; ?>" alt="">
-                <h3 class="logo">BAY FRONT</h3>
             </div>
 
             <div class="nav-btn">
@@ -190,7 +187,6 @@
 
             <div class="logo-container">
                 <img src="<?php echo BURL.'assets/img/basic/logo.png'; ?>" alt="">
-                <h3 class="logo">BAY FRONT</h3>
             </div>
 
             <div class="nav-btn">

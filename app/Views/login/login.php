@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?php echo BURL.'assets/css/login.css'; ?>">
     <script type="text/javascript" src="<?php echo BURL.'assets/js/validateLogin.js'; ?>"></script>
-    <title>BAYFRONT SIGNIN</title>
+    <title>SEABREEZE HOTEL</title>
 </head>
 
 <body>
@@ -78,7 +78,7 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New here BayFront Hotel?</h3>
+                    <h3>New here Seabreeze Hotel?</h3>
 
                     <a href="<?php url('Home/signup'); ?>"><button class="btn transparent" id="sign-up-btn">
 

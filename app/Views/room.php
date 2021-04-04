@@ -6,25 +6,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="<?php echo BURL.'assets/img/basic/favicon.png'; ?>" />
     <script type="text/javascript" src="<?php echo BURL.'assets/js/alert.js'; ?>"></script>
-    <title>BAYFRONT HOTEL</title>
+    <title>SEABREEZE HOTEL</title>
 
 </head>
 
 <body>
 
     <?php	if(isset($errors) && !empty($errors)) { ?>
-        <button style="display:none;" id="error-state"
-            onclick="customAlert.alert('Enter Data is invalid')">
-        </button>
+    <button style="display:none;" id="error-state" onclick="customAlert.alert('Enter Data is invalid')">
+    </button>
     <?php } else { ?>
     <?php	if(isset($msg2)) {?>
-        <button style="display:none;" id="error-state"
-            onclick="customAlert.alert('Plaese login then Reserve Room')">
-        </button>
+    <button style="display:none;" id="error-state" onclick="customAlert.alert('Plaese login then Reserve Room')">
+    </button>
     <?php }if(isset($msg3)) { ?>
-        <button style="display:none;" id="error-state"
-            onclick="customAlert.alert('No Rooms Available')">
-        </button>
+    <button style="display:none;" id="error-state" onclick="customAlert.alert('No Rooms Available')">
+    </button>
     <?php }} ?>
 
 
