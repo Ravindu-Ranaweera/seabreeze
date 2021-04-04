@@ -7,7 +7,7 @@ class Connection {
         $dbhost = 'localhost';
         $dbuser = 'root';
         $dbpass = '';
-        $dbname = 'bayfront_hotel';
+        $dbname = 'seabreeze';
     
         $this->connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     }

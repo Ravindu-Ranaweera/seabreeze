@@ -820,6 +820,8 @@ class Reservation extends Connection {
                 WHERE $this->reservation_table.check_in_date >= '{$start_date}' AND $this->reservation_table.check_in_date <= '{$end_date}' AND $this->reservation_table.is_valid = 1 AND $this->reservation_table.request = 0 AND
                 $this->reservation_table.check_in_status IS NOT NULL GROUP BY customer_id";
 
+        // var_dump($query);
+        // die();
         $result = mysqli_query($this->connection, $query);
         if($result) {
             mysqli_fetch_all($result,MYSQLI_ASSOC);

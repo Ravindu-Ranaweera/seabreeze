@@ -4,30 +4,13 @@ session_start();
 class TestController {
 
     public function index() {
-        view::load('dashboard/inc/formtest');
-        // //Checking if a user is logged in
-        // if(!isset($_SESSION['user_id'])) {
-        //     view::load('dashboard/dashboard');    
-        // }
-        // else {
-        //     view::load('dashboard/reservation/create');
-            // $data = array();
-            // $db = new Employee;
-            // if(isset($_POST['search'])) {
-            //     $search = $_POST['search'];
-            //     $data['employee'] = $db->getSearchEmployee($search);
-            //     //echo 'Error1';
-            //     view::load('dashboard/employee/index', $data);
-            // }
-            // else {
-            //     $data['employee'] = $db->getAllEmployee();
-            //     //echo 'Error2';
-            //     view::load('dashboard/employee/index', $data);
-            // }
-            
-            
-        // }
-           
+        view::load('dashboard/reservation/paymentThanks');
+       
+    }
+
+    public function index2() {
+        view::load('dashboard/reservation/reservationThanks');
+       
     }
 
     // public function add() {

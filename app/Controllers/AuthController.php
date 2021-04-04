@@ -81,6 +81,22 @@ class AuthController {
 						
 						// unset($_SESSION['input_room_search_data']);
 					}
+
+					if(isset($_SESSION['unreg_session_date']) && isset($_SESSION['unreg_session_time'])&& isset($_SESSION['unreg_hall_id'])) {
+						$session_date = $_SESSION['unreg_session_date'];
+						$session_time = $_SESSION['unreg_session_time'];
+						$hall_id = $_SESSION['unreg_hall_id']; 
+						
+
+						unset($_SESSION['unreg_session_date']);
+						unset($_SESSION['unreg_session_time']);
+						unset($_SESSION['unreg_hall_id']);
+
+						$banquet = new BanquetController();
+						$banquet->indexOnline($session_date,$session_time,$hall_id);
+						
+
+					}
 					else {
 						$db = new RoomDetails();
 						$data['room_details'] = $db->getRoomView(); 
@@ -89,7 +105,7 @@ class AuthController {
 						$imageRoom =$db->viewRoom();
 						$data['img_details'] = $imageRoom;
 						$db = new RoomEdit();
-            $data['discount_details'] = $db->getAllDiscount();
+            			$data['discount_details'] = $db->getAllDiscount();
 						view::load('home', $data);
 						exit();
 					}

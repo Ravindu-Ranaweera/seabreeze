@@ -416,14 +416,14 @@ class BanquetController{
                 }
                 else {
                     // above thing do again doesnot matter
-                    if($customer_id != 0) {
-                        $customer = new Customer();
-                        $customer_details = $customer->getCustomer($customer_id);
-                        $reservation = array('first_name'=>$customer_details['first_name'], 'last_name'=>$customer_details['last_name'],'age'=>$customer_details['age'],'location'=>$customer_details['location'],'contact_number'=>$customer_details['contact_number'],'email'=>$customer_details['email'],'check_in_date'=>$session_date, 'session_type'=>$session_time, 'price'=>$price, 'hall_name'=>$hall_name );
-                    }
-                    else {
+                    // if($customer_id != 0) {
+                    //     $customer = new Customer();
+                    //     $customer_details = $customer->getCustomer($customer_id);
+                    //     $reservation = array('first_name'=>$customer_details['first_name'], 'last_name'=>$customer_details['last_name'],'age'=>$customer_details['age'],'location'=>$customer_details['location'],'contact_number'=>$customer_details['contact_number'],'email'=>$customer_details['email'],'check_in_date'=>$session_date, 'session_type'=>$session_time, 'price'=>$price, 'hall_name'=>$hall_name );
+                    // }
+                    // else {
                         $reservation = array('email'=>$user_email,'check_in_date'=>$session_date, 'session_type'=>$session_time, 'price'=>$price, 'hall_name'=>$hall_name );
-                    }
+                    // }
                     
                 // }
             }

@@ -33,11 +33,13 @@
             </li>
 
 
+            
             <li class="nav1-item">
-                <a href="<?php url('reservation/details'); ?>" class="nav1-link">
+                <a href="<?php url('reservation/allReservationOptions'); ?>" class="nav1-link">
                     <p class="nav-p"><i class="material-icons">book</i>Reservations</p>
                 </a>
             </li>
+
 
             <li class="nav1-item">
 
@@ -46,6 +48,8 @@
 
                 </a>
             </li>
+
+           
 
             <li class="nav1-item">
 
@@ -65,6 +69,14 @@
                 <a href="<?php url('report/option'); ?>" class="nav1-link">
                     <p class="nav-p"><i class="material-icons">picture_as_pdf</i>Reports PDF</p>
                 </a>
+            </li>
+
+
+            <li class="nav1-item">
+                <a href="<?php url('food/index'); ?>" class="nav1-link">
+
+                    <p class="nav-p"><i class="material-icons">restaurant</i>Food Order Manage</p>   
+                </a>   
             </li>
 
             <li class="nav1-item">

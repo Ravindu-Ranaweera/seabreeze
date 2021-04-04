@@ -959,12 +959,20 @@ class ReportController {
                 // $customerBlackListCount = $customerResult3['count'];
 
                 $max = 0;
-                foreach($customerResult4 as $row) {
-                    if($max < $row['count']) {
-                        $max = $row['count'];
-                        $full_name = $row['first_name'].' '.$row['last_name'];
+                $full_name = "None Of Customer";
+                if(!empty($customerResult4)) {
+                    foreach($customerResult4 as $row) {
+                        if($max < $row['count']) {
+                            $max = $row['count'];
+                            $full_name = $row['first_name'].' '.$row['last_name'];
+                        }
                     }
                 }
+
+               
+                
+
+                // echo $max;
 
                 $customerMostReservationsName = $full_name;
                 // echo $customerMostReservationsName;
@@ -1000,6 +1008,7 @@ class ReportController {
                 // Most reservation reception
                 $employeeResult3 = $reservation->getMostReservationReception($start_date, $end_date);
                 $maxReception = 0;
+                $full_nameReception = "None Of Reception";
                 foreach($employeeResult3 as $row) {
                     if($maxReception < $row['count']) {
                         $maxReception = $row['count'];
@@ -1083,6 +1092,7 @@ class ReportController {
                 // most income room name
                 $reservationResult6 = $reservation->getMostReservationIncomeRoom($start_date, $end_date);
                 $maxRoom = 0;
+                $room_name = "None Of Room";
                 foreach($reservationResult6 as $row) {
                     if($maxRoom < $row['count']) {
                         $maxRoom = $row['count'];

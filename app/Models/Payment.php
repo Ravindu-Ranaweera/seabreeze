@@ -12,6 +12,7 @@ class Payment extends Connection {
     private $payment_currency;
     private $payment_status;
     public $payment_table = "payment";
+    public $payment_table2 = "bonquet_payment";
 
     public function __construct() {        
         Connection::__construct();
@@ -41,6 +42,40 @@ class Payment extends Connection {
         }
 
         return $customer;
+    }
+
+    public function addTransactionBanquet($data) {
+
+        $customer = new Customer();
+        $reservation = new HallBanquet();
+        $reservation->banquet_id = mysqli_real_escape_string($this->connection, $data['reservation_id']);
+        $this->payment_stripe_id = mysqli_real_escape_string($this->connection, $data['stripe_id']);
+        $this->payment_customerstripe_id = mysqli_real_escape_string($this->connection, $data['customerstripe_id']);
+        $customer->customer_id = mysqli_real_escape_string($this->connection, $data['customer_id']);
+        $this->payment_roomdesc = mysqli_real_escape_string($this->connection, $data['roomdesc']);
+        $this->payment_amount = mysqli_real_escape_string($this->connection, $data['amount']);
+        $this->payment_currency = mysqli_real_escape_string($this->connection, $data['currency']);
+        $this->payment_status = mysqli_real_escape_string($this->connection, $data['status']);
+
+        $query = "INSERT INTO $this->payment_table2 (
+                id, stripe_id, customerstripe_id, customer_id, halldesc, amount, currency, status) 
+                VALUES (
+                '{$reservation->banquet_id}', '{$this->payment_stripe_id}', '{$this->payment_customerstripe_id}', '{$customer->customer_id}', '{$this->payment_roomdesc}', '{$this->payment_amount}', '{$this->payment_currency}', '{$this->payment_status}'
+                )";
+
+        // print_r($query);
+        // die();
+        $result = mysqli_query($this->connection, $query);
+        // echo "Query Level2";
+        if($result) {
+            // query successful..
+            // echo "Query Successfull";
+            $value = 1;
+            return $value;
+        }
+        else {
+            echo "Query failedXXX";
+        }
     }
 
     public function addTransaction($data) {

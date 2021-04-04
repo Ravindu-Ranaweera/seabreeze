@@ -112,6 +112,90 @@
             // }
         }
 
+        public function payBanquestOnline() {
+            
+            \Stripe\Stripe::setApiKey('sk_test_51HyZrDHjjnJcmL75t5HSvCcjQyGdy3759Vn6zJNWasJ5EmUJjdUIps5rcys9U7VjqS51v02i90qRqSiKd66qFEOt00YdP2Gu4R');
+
+            // Sanitize POST Array
+            $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
+        
+            $first_name = $POST['first_name'];
+            $email = $POST['email'];
+            $hall_name = $POST['hall_name'];
+            $hall_view = "Hall Great View";
+            $hall_price = $POST['hall_price'];
+            $payment_way = $POST['payment_way'];
+            $customer_id = $POST['customer_id'];
+            $reservation_id = $POST['reservation_id'];
+            $token = $POST['stripeToken'];
+
+            // echo $cardnumber;
+            // echo $payment_way;
+            // die();
+            // echo $token;
+
+            if($payment_way == "ONLINEHALF") {
+                $amount = $hall_price*(0.5);
+            }
+            else {
+                $amount = $hall_price;
+            }
+            // echo $amount;
+            // echo "<br>";
+            //convert to cent dollar
+            //stripe only access integer only
+            $amount = $amount*1000;
+            // real amount should divide from 1000
+            // echo $room_price;
+            // echo "<br>";
+            // echo $amount;
+            // die();
+
+            // echo $amount;
+            // die();
+
+            // Create Customer In Stripe
+            $customer = \Stripe\Customer::create(array(
+                "email" => $email,
+                "source" => $token
+            ));
+
+            // Charge Customer
+            $charge = \Stripe\Charge::create(array(
+                "amount" => $amount,
+                "currency" => "USD",
+                "description" => $hall_name."Hall Reservation",
+                "customer" => $customer->id
+            ));
+
+
+            // Transaction Data
+            $transactionData = [
+                'reservation_id' => $reservation_id,
+                'stripe_id'=> $charge->id,
+                'customerstripe_id'=> $charge->customer,
+                'customer_id'=> $customer_id,
+                'roomdesc'=> $charge->description,
+                'amount'=> $charge->amount,
+                'currency'=> $charge->currency,
+                'status'=> $charge->status
+            ];
+
+            // Instantiate Transaction
+            $transaction = new Payment();
+
+            // Add Transaction to DB
+            $result = $transaction->addTransactionBanquet($transactionData);
+            if($result == 1) {
+                // Redirect to homepage
+                // $dashboard = new DashboardController();
+                // $dashboard->index();
+                view::load('dashboard/reservation/paymentThanks');
+            }
+            
+        // }
+    }
+
         public function paycashOnlineReservations() {
 
             $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);

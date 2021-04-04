@@ -121,7 +121,7 @@
                             </div>
                             <div class="rowdata1">
                                 <label for="#">Payment Selection</label>
-                                 <select name="payment_way" class="inputrow">
+                                 <select name="payment_way" class="inputrow" required >
                                          <option value="ONLINEPAY">-Select Payment PART-</option>
                                          <option value="ONLINEHALF" style="border: none">HALF PAYMENT</option>      
                                          <option value="ONLINEFULL" style="border: none">FULL PAYMENT</option>      
@@ -130,8 +130,6 @@
                         </div>
                         <div class="rowlong">
                             <label for="#">Credit Card Details
-                                <i class="fa fa-exclamation-circle"></i>
-                                <i class="fa fa-check-circle" style="color: rgb(12, 59, 12);"></i>
                             </label>
                            
                                 <div id="card-element" class="paymentcardform inputrow">

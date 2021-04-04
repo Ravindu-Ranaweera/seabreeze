@@ -27,6 +27,7 @@
                    <div class="options">
                        <h4>All Room Reservations  
                        <span>
+                            <a href="<?php url("reservation/allReservationOptions"); ?>" class="addnew"><i class="material-icons">reply_all</i></a>  
                             <?php if($_SESSION['user_level'] != "Owner"): ?>
                                 <a href="<?php url("reservation/index"); ?>" class="addnew"><i class="material-icons">add_circle</i></a> 
                             <?php endif; ?>

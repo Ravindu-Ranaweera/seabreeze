@@ -36,10 +36,10 @@
            	<div id='check-in' class='form-fieldY'>
 
                 <?php 
-                
-                // echo $newDate;
-                
+                        date_default_timezone_set("Asia/Colombo");
+                        $current_date = date('Y-m-d');
                 ?>
+
                 <input type="date" name="session_date"   placeholder="9 July, 2016"
                 <?php 
                         if(isset($input_data['session_date'])) { ?>
@@ -49,9 +49,9 @@
                                 ?>
                                  
                                 value= "<?php echo $newDate; ?>"
-                <?php   } else { ?>
-                                value = "Hello"
-                <?php } ?>
+                <?php   } else {
+                                echo 'min="'.$current_date .'" value="'.$current_date .'"';
+                 } ?>
 
                 >
                 <!-- <div class='datepicker'><i class="fa fa-calendar" aria-hidden="true"></i></div> -->

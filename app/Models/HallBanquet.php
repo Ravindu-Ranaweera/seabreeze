@@ -140,12 +140,14 @@ class HallBanquet extends Connection {
                   WHERE $this->banquet_table.is_valid = 1 AND $this->banquet_table.request = 1 AND $this->banquet_table.session_date >= '{$current_date}'
                   ORDER BY $this->banquet_table.session_date";
 
+        // var_dump($query);
+        // die();
         $rooms = mysqli_query($this->connection, $query);
         if($rooms) {
             mysqli_fetch_all($rooms,MYSQLI_ASSOC);
         }
         else {
-            echo "Database Query Failed";
+            echo "Database Query Failed1";
         }    
 
     return $rooms;

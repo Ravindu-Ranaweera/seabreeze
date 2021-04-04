@@ -26,7 +26,9 @@
            <div class="card">
                <div class="cardheader">
                    <div class="options">
-                       <h4>Hall Select Option Page</h4>
+                       <h4>Hall Select Option Page
+                       <a href="<?php url("reservation/allReservationOptions"); ?>" class="addnew"><i class="material-icons">reply_all</i></a>  
+                       </h4>
                    </div>
                    <p class="textfortabel">Select Hall Choice</p>
                </div>
@@ -54,18 +56,6 @@
                             <a href="<?php url('banquet/hallReservationIndex');?>"></a>
                         </div>
 
-                        <?php if($_SESSION['user_level'] == "Reception") { ?>
-                            <!-- <div class="horBadge">
-                            
-                                <div class="icon1">
-                                    <i class="fas fa-user-tag"></i>
-                                </div>
-                                <div class="text">
-                                    Make Reservation
-                                </div>
-                                <a href="<?php url('banquet/createIndex');?>"></a>
-                            </div> -->
-                        <?php } ?>
                     </div>
            </div> 
        </div>

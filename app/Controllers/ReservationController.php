@@ -5,6 +5,18 @@ if (session_status() == PHP_SESSION_NONE) {
 
 class ReservationController {
 
+
+    public function allReservationOptions() {
+        if(!isset($_SESSION['user_id'])) {
+            $dashboard = new DashboardController();
+            $dashboard->index();
+        }
+        else {
+            view::load('dashboard/reservation/selectOption');
+        }
+
+    }
+
     public function index($customer_id = 0) {
         
         //Checking if a user is logged in

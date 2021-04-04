@@ -19,20 +19,20 @@ class ReceptionReservationPDF extends TCPDF {
 
     public function Header() {
         $imageFile = K_PATH_IMAGES.'logo.png';
-        $this->Image($imageFile, 30, 10, 40, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+        $this->Image($imageFile, 5, 5, 50, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
         $this->Ln(5);  // font name size style
         $this->setFont('helvetica', 'B', 15);
 
         // 189 is total width of A4 page, height, border, line
         // Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $caligh='T', $valigh='M')
 
-        $this->Cell(189, 5, 'Bayfront Hotel Mangement', 0, 1, 'C');
+        $this->Cell(189, 5, 'Seabreeze Hotel Mangement', 0, 1, 'C');
         $this->SetFont('helvetica', '', 10);
         $this->Cell(189, 3, '502, Bypass road', 0, 1, 'C');
-        $this->Cell(189, 3, 'Weligama, Sri Lanka', 0, 1, 'C');
+        $this->Cell(189, 3, 'Ambalangoda, Sri Lanka', 0, 1, 'C');
         // $this->Cell(189, 3, '1200, Bangladesh', 0, 1, 'C');
         $this->Cell(189, 3, 'Phone: +94 76 729 3945', 0, 1, 'C');
-        $this->Cell(189, 3, 'Email: bayfrontweli45@gmail.com', 0, 1, 'C');
+        $this->Cell(189, 3, 'Email: seabreeze45@gmail.com', 0, 1, 'C');
         $this->SetFont('helvetica', 'B', 13);
         $this->Ln(3); // space
 
